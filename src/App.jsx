@@ -7,35 +7,56 @@ function App() {
   const [currentPair, setCurrentPair] = useState(null);
   const [showAssignments, setShowAssignments] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState(null);
-  const [showMajorityQuestion, setShowMajorityQuestion] = useState(false);
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [showMajority, setShowMajority] = useState(false);
 
   const handleNewQuestion = () => {
-    const randomIndex = Math.floor(Math.random() * questionPairs.length);
-    const pair = questionPairs[randomIndex];
+    const pair = questionPairs[questionIndex % questionPairs.length];
     setCurrentPair(pair);
 
     const players = Array.from({ length: playerCount }, (_, i) => i + 1);
-    const liarIndex = Math.floor(Math.random() * playerCount);
-    const assignments = players.map((player, i) => ({
+
+    // Déterminer combien de menteurs (1 à tous)
+    const random = Math.random();
+    let minorityCount = 1;
+    if (random < 0.1) {
+      minorityCount = Math.min(2, playerCount - 1); // 10% de chance que 2 aient la minoritaire
+    } else if (random < 0.13) {
+      minorityCount = playerCount; // 3% de chance que tous aient la minoritaire
+    }
+
+    const shuffled = [...players].sort(() => Math.random() - 0.5);
+    const minorityPlayers = new Set(shuffled.slice(0, minorityCount));
+
+    const assignments = players.map((player) => ({
       player,
-      question: i === liarIndex ? pair.minority : pair.majority
+      question: minorityPlayers.has(player) ? pair.minority : pair.majority
     }));
 
     setAssignedQuestions(assignments);
     setShowAssignments(true);
     setSelectedPlayer(null);
-    setShowMajorityQuestion(false);
+    setShowMajority(false);
+    setQuestionIndex(prev => prev + 1);
   };
 
   const handleSelectPlayer = (player) => {
     setSelectedPlayer(player);
   };
 
+  const handleHideQuestion = () => {
+    setSelectedPlayer(null);
+  };
+
+  const toggleMajority = () => {
+    setShowMajority(prev => !prev);
+  };
+
   const currentAssignment = assignedQuestions.find(a => a.player === selectedPlayer);
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial', maxWidth: 700, margin: 'auto' }}>
-      <h1>🎭 Trouve le menteur</h1>
+      <h1>🎭 Full Squad Gaming Guess The Liar</h1>
 
       <label style={{ display: 'block', marginBottom: '1rem' }}>
         Nombre de joueurs :
@@ -54,7 +75,7 @@ function App() {
         style={{
           padding: '0.5rem 1rem',
           fontSize: '1rem',
-          marginBottom: '1rem',
+          marginBottom: '2rem',
           cursor: 'pointer'
         }}
       >
@@ -62,26 +83,7 @@ function App() {
       </button>
 
       {showAssignments && (
-        <>
-          <button
-            onClick={() => setShowMajorityQuestion(!showMajorityQuestion)}
-            style={{
-              padding: '0.5rem 1rem',
-              fontSize: '1rem',
-              marginBottom: '1rem',
-              cursor: 'pointer'
-            }}
-          >
-            📣 {showMajorityQuestion ? 'Cacher' : 'Afficher'} la question majoritaire
-          </button>
-
-          {showMajorityQuestion && currentPair && (
-            <div style={{ marginBottom: '1rem' }}>
-              <h3>Question majoritaire :</h3>
-              <p style={{ fontSize: '1.2rem' }}>{currentPair.majority}</p>
-            </div>
-          )}
-
+        <div>
           <h2>Afficher la question d’un joueur :</h2>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
             {assignedQuestions.map(({ player }) => (
@@ -105,15 +107,20 @@ function App() {
               <h3>Question pour Joueur {selectedPlayer} :</h3>
               <p style={{ fontSize: '1.2rem' }}>{currentAssignment.question}</p>
               <p style={{ fontStyle: 'italic' }}>Montrez cette question en privé au joueur concerné.</p>
-              <button
-                onClick={() => setSelectedPlayer(null)}
-                style={{ marginTop: '0.5rem', padding: '0.3rem 0.8rem', cursor: 'pointer' }}
-              >
+              <button onClick={handleHideQuestion} style={{ marginTop: '1rem', cursor: 'pointer' }}>
                 ❌ Cacher la question
               </button>
             </div>
           )}
-        </>
+
+          <button onClick={toggleMajority} style={{ marginTop: '1rem', cursor: 'pointer' }}>
+            📣 {showMajority ? 'Cacher' : 'Afficher'} la question majoritaire
+          </button>
+
+          {showMajority && currentPair && (
+            <p style={{ marginTop: '1rem', fontWeight: 'bold' }}>{currentPair.majority}</p>
+          )}
+        </div>
       )}
     </div>
   );
