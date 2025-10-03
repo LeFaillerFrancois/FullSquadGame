@@ -4,6 +4,162 @@ export const questionPairs = [
     minority: "Quel est ton restaurant gastronomique préféré ?"
   },
   {
+    majority: "Cite quelque chose que tu penses que les gens ne font que semblant d'aimer",
+    minority: "Cite quelque chose (une trend, un jeu, une époque...) que tu aimerais voir revenir sur le devant de la scène"
+  },
+  {
+    majority: "La meilleure phrase à sortir à un spam call",
+    minority: "La meilleure phrase à sortir quand tu plaque/quitte quelqu'un"
+  },
+  {
+    majority: "Cite le truc (personne, dessin animé...) le plus fou sur lequel tu as déjà pensé des choses lugubres",
+    minority: "Cite le personnage de show télévision le plus hot selon toi"
+  },
+  {
+    majority: "Si tu pouvais faire ton propre pays, quelle serait ta toute première règle/loi ?",
+    minority: "Quelle était la loi/règle la plus bizarre que tes parents t'ont donné plus jeune ?"
+  },
+  {
+    majority: "Si tu devais montrer une vidéo à quelqu'un sur ton téléphone, quelle serait la durée idéale avant que ça devienne bizarre/long ?",
+    minority: "Range de 15sec à 10min"
+  },
+  {
+    majority: "Si tu pouvais rester au lycée autant que tu le voulais, combien de temps aurais tu voulu y rester ?",
+    minority: "Range de 5 mois à 10 ans"
+  },
+  {
+    majority: "Quel super vilain soutiens tu/ comprends tu un peu dans sa démarche ?",
+    minority: "Quel est le pire super vilain selon toi ?"
+  },
+  {
+    majority: "Quel super héros ferait le meilleur colocataire selon toi ?",
+    minority: "Quel super héros est le plus fort selon toi ?"
+  },
+  {
+    majority: "A quel âge donner les premières information d'éducation sexuelle à tes enfants ?",
+    minority: "A quel âge as tu embrassé quelqu'un pour la première fois ?"
+  },
+  {
+    majority: "Cite le pire premier ministre selon toi",
+    minority: "Cite le meilleur premier ministre selon toi"
+  },
+  {
+    majority: "Donne ton âge idéal de départ à la retraite",
+    minority: "Donne l'âge de ta grand mère / mère / parent"
+  },
+  {
+    majority: "Pour ou contre la réforme des retraites ?",
+    minority: "Pour ou contre la taxe zuckman ?"
+  },
+  {
+    majority: "Si tu pouvais avoir un meuble sur une ile déserte, lequel ce serait ? ",
+    minority: "Cite ton meuble préféré"
+  },
+  {
+    majority: "Quelle a été la pire phrase qu'on t'ait dite lors d'un rateau/rupture ? invente si aucune",
+    minority: "Quelle a été la pire phrase qu'on t'ait dite lors d'un refus d'emploi/stage ? invente si aucune"
+  },
+  {
+    majority: "Pire décision/gestion de crise des mandats de Macron selon toi",
+    minority: "Meilleure décision/gestion de crise des mandats de Macron selon toi"
+  },
+  {
+    majority: "Cite l'animal que tu imites le mieux",
+    minority: "Quel animal fais le pire bruit selon toi ?"
+  },
+  {
+    majority: "Quelle était la légende urbaine (type père noel, croco passage piéton) la plus bizarre que tu croyais jeune ?",
+    minority: "Quelle légende urbaine (type père noel, croco passage piéton) vas tu donner à tes enfants pour qu'ils se comportent bien ?"
+  },
+  {
+    majority: "Combien de temps pour cuire un oeuf parfait dans une casserole selon toi ?",
+    minority: "Combien de temps tu passes en moyenne sur un passage aux toilettes ?"
+  },
+  {
+    majority: "Combien de temps tu prends pour manger le midi ?",
+    minority: "A partir de quelle durée ce serait trop pour toi au lit ?"
+  },
+  {
+    majority: "En moyenne, combien de fois tu cuisines par semaine ?",
+    minority: "Dans l'idéal, combien de jours aimererais tu travailler par semaine ?"
+  },
+  {
+    majority: "Combien de personne viendraient pour t'aider à déménager ?",
+    minority: "Nombre entre 0 et 20"
+  },
+  {
+    majority: "Quel est ton animé préféré ?",
+    minority: "Quel est l'animé le plus long pour rien selon toi ?"
+  },
+  {
+    majority: "Quelle est la tache ménagère que tu déteste faire ?",
+    minority: "Quelle est la tâche ménagère pour laquelle tu aiderais le plus tes parents ?"
+  },
+  {
+    majority: "Combien de dates avant le premier bisous ?",
+    minority: "Nombre entre 1 et 15"
+  },
+  {
+    majority: "Quel est ton alcool préféré ?",
+    minority: "Quel est l'alcool que tu détestes le plus ?"
+  },
+  {
+    majority: "Quel animé tu recommanderais à un néophite ?",
+    minority: "Quel animé est le plus surestimé ?"
+  },
+  {
+    majority: "Cite un truc dans ta maison/appart sans lequel tu ne pourrais vivre",
+    minority: "Cite le truc le plus fragile dans ta maison/appart"
+  },
+  {
+    majority: "Si tu devais drop du loot à chaque coup qu'on te donnait, qu'est ce que ce serait ?",
+    minority: "Cite un petit objet sans lequel tu ne pourrais vivre"
+  },
+  {
+    majority: "Si tu pouvais montrer à des gens du futurs un truc qui représenterait 2025, qu'est ce que ce serait ?",
+    minority: "Si tu pouvais montrer à des gens du passé un truc qui représenterait 2025, qu'est ce que ce serait ?"
+  },
+  {
+    majority: "Si tu pouvais lvl up une de tes stats dans la vraie vie, laquelle ce serait ?",
+    minority: "Quel est ton meilleur trait de personnalité ?"
+  },
+  {
+    majority: "Quelle est la théorie du complot innoffensive à laquelle tu crois un peu ?",
+    minority: "Quelle est la théorie du complot la plus conne selon toi ?"
+  },
+  {
+    majority: "Quel est le meilleur meme ever selon toi ?",
+    minority: "Quel est le pire meme selon toi ?"
+  },
+  {
+    majority: "A quel âge devrait on avoir son premier téléphone ?",
+    minority: "A quel âge as tu vu ton premier truc lugubre ?"
+  },
+  {
+    majority: "Combien d'argent pour montrer ton historique de recherche COMPLET (y compris privé) à tous tes proches ?",
+    minority: "Combien d'argent pour ta première voiture ?"
+  },
+  {
+    majority: "Si tu pouvais demander n'importe quelle somme d'argent à quelqu'un (random) dans la rue qu'il ne pourrait refuser (type challenge YES MAN), combien serais tu capables de demander ?",
+    minority: "Quel prix serais tu prêt à mettre par mois dans de l'essence pour ta voiture avant de réfléchir à un autre mode de transport ?"
+  },
+  {
+    majority: "Tu préfères te battre contre un gorille une fois par an, mais tu ne sais jamais quand, ou avoir un ou des canards qui te suit partout et te juge silencieusement ? (réponds par un canard ou un gorille)",
+    minority: "1 Gorille VS 1000 canards assoifés de sang, qui gagne ? (répond par canard ou gorille)"
+  },
+  {
+    majority: "Si tu étais une chaise pendant 24h, qui aimerais-tu voir s’asseoir sur toi ?",
+    minority: "Qui est la personne la plus belle que tu connaisses ?"
+  },
+  {
+    majority: "Si tu avais une baguette magique, mais qu'elle ne marche que pour faire des trucs inutiles, tu l'utiliserais pour quoi ?",
+    minority: "Un truc inutile que tu détestes avoir à faire"
+  },
+  {
+    majority: "Quel serait le nom de ton attaque spéciale si t’étais un boss de fin ?",
+    minority: "Donne un nom de coup spécial qui te paraît ridicule"
+  },
+  {
     majority: "Quelle est la série que tu pourrais revoir encore et encore ?",
     minority: "Quelle est la série que tu n’as jamais réussi à finir ?"
   },
@@ -263,4 +419,5 @@ export const questionPairs = [
     majority: "Es tu déjà sorti avec l'ex d'un.e ami.e ?",
     minority: "Es tu déjà sorti avec un.e ami.e ?"
   }
+  
 ];
